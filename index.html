@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2KR: AFTERMATH — Prototype</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="start" class="overlay">
+  <div class="panel">
+    <div class="eyebrow">PROTOCOLE 02 / SIMULATION TACTIQUE</div>
+    <h1>2KR <span>AFTERMATH</span></h1>
+    <p>Prototype FPS tactique jouable dans le navigateur. Explore, récupère les balises et neutralise les cibles d'entraînement.</p>
+    <div class="features"><span>MONDE 3D</span><span>FPS / TPS</span><span>IA D'ENTRAÎNEMENT</span><span>MODE LOCAL</span></div>
+    <label for="callsign">Indicatif</label><input id="callsign" maxlength="16" value="GHOST-02">
+    <button id="play">DÉPLOYER</button>
+    <small>WASD déplacer · souris regarder · clic tirer · E interaction · V caméra · Shift courir · Échap libérer la souris</small>
+  </div>
+</div>
+<canvas id="game"></canvas>
+<div id="hud">
+ <div class="topline"><div class="brand">2KR <span>AFTERMATH</span></div><div class="status"><i></i> SECTEUR ACTIF <b id="clock">00:00</b></div></div>
+ <div class="mission"><small>OBJECTIF PRIORITAIRE</small><strong>RÉCUPÉRER LES BALISES</strong><span id="objective">Balises : 0 / 3</span></div>
+ <div class="crosshair"><i></i><b></b></div>
+ <div class="bottom-left"><div class="stat"><label>SANTÉ</label><strong id="health">100</strong><div class="bar"><i id="healthbar"></i></div></div><div class="stat"><label>ENDURANCE</label><strong id="stamina">100</strong><div class="bar"><i id="staminabar"></i></div></div></div>
+ <div class="bottom-right"><div class="weapon">MK-4 <span>CARABINE</span></div><div class="ammo"><strong id="ammo">30</strong><span>/ 120</span></div><small>CLIC GAUCHE : TIRER</small></div>
+ <div id="toast"></div><div id="hint">WASD · V CHANGER DE CAMÉRA · E INTERAGIR</div>
+ <div id="hitmarker">×</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script><script src="game.js"></script>
+</body></html>
